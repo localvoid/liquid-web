@@ -1,0 +1,7 @@
+name: liquid_web
+description: A sample web application
+dependencies:
+  browser: any
+  liquid: any
+  observe: any
+  route: any
