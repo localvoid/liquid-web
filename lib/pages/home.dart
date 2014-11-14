@@ -16,5 +16,4 @@ void main() {
 
   injectComponent(new TodoApp(null, new ObservableList()),
       querySelector('#demo-todo'));
-
 }

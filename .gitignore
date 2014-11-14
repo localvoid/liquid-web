@@ -3,6 +3,7 @@
 pubspec.lock
 
 build/
+.pub/
 packages
 
 .buildlog
@@ -10,7 +11,6 @@ packages
 *.js.deps
 *.js.map
 *.dart.js
-.pub/
 
 # Eclipse
 .project
