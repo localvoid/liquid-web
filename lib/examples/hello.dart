@@ -8,5 +8,6 @@ class HelloMessage extends VComponent {
 
   HelloMessage(Context context, this.name) : super('div', context);
 
+  // Each VDom Node should have key that is unique amongst its siblings.
   build() => vdom.div(0, [vdom.text(0, 'Hello $name!')]);
 }
