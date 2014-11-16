@@ -44,20 +44,18 @@ class TodoApp extends VComponent {
   vdom.TextInput _input;
 
   TodoApp(Context context, this.items) : super('div', context) {
-    Zone.ROOT.run(() {
-      element.onClick.matches('button').listen((e) {
-        if (_input.value.isNotEmpty) {
-          items.add(new TodoItem(_input.value));
-        }
-        e.preventDefault();
-        e.stopPropagation();
-      });
+    element.onClick.matches('button').listen((e) {
+      if (_input.value.isNotEmpty) {
+        items.add(new TodoItem(_input.value));
+      }
+      e.preventDefault();
+      e.stopPropagation();
     });
   }
 
   attached() {
     super.attached();
-    Zone.ROOT.run(() => _sub = items.changes.listen((_) => invalidate()));
+    _sub = items.changes.listen((_) => invalidate());
   }
 
   detached() {

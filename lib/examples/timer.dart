@@ -12,11 +12,9 @@ class TimerView extends VComponent {
 
   attached() {
     super.attached();
-    Zone.ROOT.run(() {
-      _timer = new Timer.periodic(const Duration(seconds: 1), (_) {
-        secondsElapsed++;
-        invalidate();
-      });
+    _timer = new Timer.periodic(const Duration(seconds: 1), (_) {
+      secondsElapsed++;
+      invalidate();
     });
   }
 
